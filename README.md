@@ -11,6 +11,14 @@ A full-stack customer support ticketing CRM
 - Backend Deployment: Railway
 - Frontend Deployment: Vercel
 
+## Tech Stack
+
+- **Python** — Backend programming language
+- **FastAPI** — Backend REST API framework
+- **SQLite** — Database
+- **React** — Frontend UI framework
+- **Vite** — Frontend build tool and development server
+
 ## Features
 
 - Create support tickets
