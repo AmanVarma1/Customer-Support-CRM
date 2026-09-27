@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/api/tickets";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/tickets/`;
 
 export async function getTickets(status = "", search = "") {
   const params = new URLSearchParams();
@@ -23,7 +23,7 @@ export async function getTickets(status = "", search = "") {
 }
 
 export async function getTicket(ticketId) {
-  const response = await fetch(`${API_URL}/${ticketId}`);
+  const response = await fetch(`${API_URL}${ticketId}`);
 
   if (!response.ok) {
     if (response.status === 404) {
@@ -54,7 +54,7 @@ export async function createTicket(ticketData) {
 }
 
 export async function updateTicket(ticketId, ticketData) {
-  const response = await fetch(`${API_URL}/${ticketId}`, {
+  const response = await fetch(`${API_URL}${ticketId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
